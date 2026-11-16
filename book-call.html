@@ -18,7 +18,7 @@
 <div class="field" style="height:84px">Is there a reason why now feels like the right time?</div>
 <div class="field" style="height:84px">Is there anything you'd like me to know before we speak?</div>
 <div class="field">First name</div><div class="field">Email</div>
-<label class="check"><i></i><span>I'm happy for Heni to keep my answers to prepare for our call. <u>Privacy policy</u></span></label>
+<label class="check"><i></i><span>I'm happy for Heni to keep my answers to prepare for our call. <a href="privacy.html" style="color:inherit">Privacy policy</a></span></label>
 <a class="btn full" href="thanks-call.html">Book a free call</a></div></div></div></main><footer class="footer"><div class="wrap"><div class="care">
 <div><h3>Need more support?</h3><p class="sub">Gay Men Connect is a space for connection and conversation, not a substitute for professional mental health support. If you're struggling, please speak to a qualified mental health professional. If you're in immediate danger, contact your local emergency services.</p></div>
 <ul class="lines">
@@ -28,6 +28,13 @@
 <li>Pink Therapy: a directory of therapists who work with gender and sexual diversity, at pinktherapy.com</li>
 <li>If you're in danger right now, call 999, or your local emergency number.</li></ul></div>
 <div class="base"><img src="img/logo-white.png" alt="That Midlife Gay">
-<span>That Midlife Gay is a trading name of Fourie Photography Ltd. &nbsp; <a href="#">Privacy</a> &nbsp; <a href="#">Terms</a></span></div>
+<span>That Midlife Gay is a trading name of Fourie Photography Ltd. &nbsp; <a href="privacy.html">Privacy</a> &nbsp; <a href="terms.html">Terms</a> &nbsp; <a href="#" data-cookie-settings>Cookie settings</a></span></div>
 </div></footer>
-<script>document.querySelectorAll(".burger").forEach(b=>b.addEventListener("click",()=>document.body.classList.toggle("menu-open")))</script><script>addEventListener("load",()=>setTimeout(()=>document.documentElement.setAttribute("data-h",document.documentElement.scrollHeight),300))</script></body></html>
+<div class="cookiebar" role="dialog" aria-label="Cookies" hidden><div class="wrap">
+<p>I'd like to use cookies to see how people find and use this site. They're Google Analytics cookies, and they're only set if you accept. <a href="privacy.html">Privacy policy</a></p>
+<div class="cookiebtns"><button class="btn" data-cookie="accept">Accept</button><button class="btn ghost" data-cookie="reject">Reject</button></div></div></div>
+<script>(function(){var b=document.querySelector(".cookiebar"),k="tmg-cookies",v=null;
+try{v=localStorage.getItem(k)}catch(e){}
+if(!v)b.hidden=false;
+document.querySelectorAll("[data-cookie]").forEach(function(x){x.addEventListener("click",function(){try{localStorage.setItem(k,x.dataset.cookie)}catch(e){}b.hidden=true})});
+document.querySelectorAll("[data-cookie-settings]").forEach(function(x){x.addEventListener("click",function(e){e.preventDefault();b.hidden=false})});})()</script><script>document.querySelectorAll(".burger").forEach(b=>b.addEventListener("click",()=>document.body.classList.toggle("menu-open")))</script><script>addEventListener("load",()=>setTimeout(()=>document.documentElement.setAttribute("data-h",document.documentElement.scrollHeight),300))</script></body></html>

@@ -6,6 +6,13 @@
 <p class="lead" style="margin-top:18px">Where should I send the five short emails I've written for your type? Your result shows on the next page, whether or not you tick the box.</p>
 <div class="form"><div class="field">First name</div><div class="field">Email</div>
 <label class="check"><i></i><span>Send me the five emails for my type. Only my type is kept, never my answers. I can unsubscribe at any time.</span></label>
-<a class="small" href="#" style="text-decoration:underline">Privacy policy</a>
+<a class="small" href="privacy.html" style="text-decoration:underline">Privacy policy</a>
 <a class="btn full" href="quiz-4-reveal.html">Show me my result</a></div></main>
-<script>document.querySelectorAll(".burger").forEach(b=>b.addEventListener("click",()=>document.body.classList.toggle("menu-open")))</script><script>addEventListener("load",()=>setTimeout(()=>document.documentElement.setAttribute("data-h",document.documentElement.scrollHeight),300))</script></body></html>
+<div class="cookiebar" role="dialog" aria-label="Cookies" hidden><div class="wrap">
+<p>I'd like to use cookies to see how people find and use this site. They're Google Analytics cookies, and they're only set if you accept. <a href="privacy.html">Privacy policy</a></p>
+<div class="cookiebtns"><button class="btn" data-cookie="accept">Accept</button><button class="btn ghost" data-cookie="reject">Reject</button></div></div></div>
+<script>(function(){var b=document.querySelector(".cookiebar"),k="tmg-cookies",v=null;
+try{v=localStorage.getItem(k)}catch(e){}
+if(!v)b.hidden=false;
+document.querySelectorAll("[data-cookie]").forEach(function(x){x.addEventListener("click",function(){try{localStorage.setItem(k,x.dataset.cookie)}catch(e){}b.hidden=true})});
+document.querySelectorAll("[data-cookie-settings]").forEach(function(x){x.addEventListener("click",function(e){e.preventDefault();b.hidden=false})});})()</script><script>document.querySelectorAll(".burger").forEach(b=>b.addEventListener("click",()=>document.body.classList.toggle("menu-open")))</script><script>addEventListener("load",()=>setTimeout(()=>document.documentElement.setAttribute("data-h",document.documentElement.scrollHeight),300))</script></body></html>

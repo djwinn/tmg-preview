@@ -8,4 +8,11 @@
 <p style="margin-top:26px">Your answers also suggest you may recognise yourself in The Independent Spirit. It might be worth reading that one too.</p>
 <p class="small" style="margin-top:14px">This is a reflection to start from, not a diagnosis.</p>
 <div class="btnrow"><a class="btn dark" href="result-giver.html">Read your result</a></div></div></main>
-<script>document.querySelectorAll(".burger").forEach(b=>b.addEventListener("click",()=>document.body.classList.toggle("menu-open")))</script><script>addEventListener("load",()=>setTimeout(()=>document.documentElement.setAttribute("data-h",document.documentElement.scrollHeight),300))</script></body></html>
+<div class="cookiebar" role="dialog" aria-label="Cookies" hidden><div class="wrap">
+<p>I'd like to use cookies to see how people find and use this site. They're Google Analytics cookies, and they're only set if you accept. <a href="privacy.html">Privacy policy</a></p>
+<div class="cookiebtns"><button class="btn" data-cookie="accept">Accept</button><button class="btn ghost" data-cookie="reject">Reject</button></div></div></div>
+<script>(function(){var b=document.querySelector(".cookiebar"),k="tmg-cookies",v=null;
+try{v=localStorage.getItem(k)}catch(e){}
+if(!v)b.hidden=false;
+document.querySelectorAll("[data-cookie]").forEach(function(x){x.addEventListener("click",function(){try{localStorage.setItem(k,x.dataset.cookie)}catch(e){}b.hidden=true})});
+document.querySelectorAll("[data-cookie-settings]").forEach(function(x){x.addEventListener("click",function(e){e.preventDefault();b.hidden=false})});})()</script><script>document.querySelectorAll(".burger").forEach(b=>b.addEventListener("click",()=>document.body.classList.toggle("menu-open")))</script><script>addEventListener("load",()=>setTimeout(()=>document.documentElement.setAttribute("data-h",document.documentElement.scrollHeight),300))</script></body></html>

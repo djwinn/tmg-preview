@@ -206,3 +206,32 @@ a.answer { text-decoration: none; color: inherit; display: block; }
 .type, .answer { transition: transform .15s; }
 a.type:hover, a.answer:hover { transform: translateY(-2px); }
 @media (min-width: 900px) { .nav .menu, body.menu-open .nav .menu { display: none; } body.menu-open .nav { position: absolute; background: none; } }
+
+/* Privacy and terms: his text, set for long reading */
+.legal { padding: 64px 0 96px; }
+.legal h1.display { font-size: 58px; margin-bottom: 14px; }
+.legal .legal-meta { color: var(--faint); font-size: 15px; margin-top: 0; }
+.legal h2.display { font-size: 34px; margin: 52px 0 16px; }
+.legal h3 { margin-top: 30px; }
+.legal p { color: var(--soft); margin-top: 14px; }
+.legal p strong, .legal li strong { color: var(--white); }
+.legal ul { list-style: none; margin-top: 14px; display: grid; gap: 10px; }
+.legal li { color: var(--soft); padding-left: 22px; position: relative; }
+.legal li::before { content: ""; position: absolute; left: 2px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: var(--lime); }
+.legal a.textlink { color: var(--white); }
+@media (min-width: 900px) { .legal h1.display { font-size: 84px; } .legal h2.display { font-size: 42px; } }
+
+/* Cookie banner: accept and reject carry the same weight */
+.cookiebar { position: fixed; z-index: 20; left: 0; right: 0; bottom: 0; background: var(--night-2); border-top: 1px solid var(--line); padding: 18px 0 20px; box-shadow: 0 -18px 40px rgba(0,0,0,.35); }
+.cookiebar[hidden] { display: none; }
+.cookiebar .wrap { display: grid; gap: 14px; }
+.cookiebar p { font-size: 15px; line-height: 1.5; color: var(--soft); }
+.cookiebar p a { color: var(--white); }
+.cookiebtns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.cookiebtns .btn { padding: 15px 18px; font-size: 16px; cursor: pointer; border: 1.5px solid var(--lime); }
+.cookiebtns .btn.ghost { border-color: var(--white); }
+@media (min-width: 900px) {
+  .cookiebar .wrap { grid-template-columns: 1fr auto; align-items: center; gap: 40px; }
+  .cookiebtns { grid-template-columns: auto auto; }
+  .cookiebtns .btn { min-width: 150px; }
+}

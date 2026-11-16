@@ -11,4 +11,11 @@
 <a href="quiz-3-capture.html" class="answer">I'm fine on my own. Mostly.</a>
 <a href="quiz-3-capture.html" class="answer">All those people, and who would I actually call?</a></div>
 <p class="small" style="margin-top:26px">&larr; Back</p></main>
-<script>document.querySelectorAll(".burger").forEach(b=>b.addEventListener("click",()=>document.body.classList.toggle("menu-open")))</script><script>addEventListener("load",()=>setTimeout(()=>document.documentElement.setAttribute("data-h",document.documentElement.scrollHeight),300))</script></body></html>
+<div class="cookiebar" role="dialog" aria-label="Cookies" hidden><div class="wrap">
+<p>I'd like to use cookies to see how people find and use this site. They're Google Analytics cookies, and they're only set if you accept. <a href="privacy.html">Privacy policy</a></p>
+<div class="cookiebtns"><button class="btn" data-cookie="accept">Accept</button><button class="btn ghost" data-cookie="reject">Reject</button></div></div></div>
+<script>(function(){var b=document.querySelector(".cookiebar"),k="tmg-cookies",v=null;
+try{v=localStorage.getItem(k)}catch(e){}
+if(!v)b.hidden=false;
+document.querySelectorAll("[data-cookie]").forEach(function(x){x.addEventListener("click",function(){try{localStorage.setItem(k,x.dataset.cookie)}catch(e){}b.hidden=true})});
+document.querySelectorAll("[data-cookie-settings]").forEach(function(x){x.addEventListener("click",function(e){e.preventDefault();b.hidden=false})});})()</script><script>document.querySelectorAll(".burger").forEach(b=>b.addEventListener("click",()=>document.body.classList.toggle("menu-open")))</script><script>addEventListener("load",()=>setTimeout(()=>document.documentElement.setAttribute("data-h",document.documentElement.scrollHeight),300))</script></body></html>
