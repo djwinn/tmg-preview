@@ -9,17 +9,17 @@
 .ck{padding:0 34px 34px;overflow:hidden}
 .ck-tabs{display:flex;margin:0 -34px}.ck-tabs a{flex:1;text-align:center;padding:18px 8px;font:600 15px/1 Inter;color:#5E5A52;text-decoration:none}
 .ck-tabs b{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;border:1.5px solid currentColor;margin-right:8px;font-size:12px}
-.ck[data-on="1"] .ck-tabs a:first-child,.ck[data-on="2"] .ck-tabs a:last-child{color:#111}
+.ck[data-on="1"] .ck-tabs a:first-child,.ck[data-on="2"] .ck-tabs a:last-child{color:#171918}
 .divider-form{height:3px;margin:0 -34px 26px}
-.ck[data-on="1"] .divider-form{background:linear-gradient(90deg,#111 50%,#DDD8CC 50%)!important}
-.ck[data-on="2"] .divider-form{background:linear-gradient(90deg,#DDD8CC 50%,#111 50%)!important}
+.ck[data-on="1"] .divider-form{background:linear-gradient(90deg,#171918 50%,#D2CBBF 50%)!important}
+.ck[data-on="2"] .divider-form{background:linear-gradient(90deg,#D2CBBF 50%,#171918 50%)!important}
 .ck-step{display:none}.ck[data-on="1"] .s1,.ck[data-on="2"] .s2{display:grid;gap:12px}
 .form-input{padding:17px 16px}.ck .form-input{color:#8a857b!important}
 .form-btn{display:block;text-align:center;text-decoration:none;margin-top:10px}
 .ck-row{display:flex;justify-content:space-between;gap:16px;padding:6px 0;font-size:16px}.ck-row small{color:#5E5A52;font-size:14px;font-weight:400}
 .divider-product{height:1px}
 .ck-stripe{background:#fff;border:1px solid #e0e0e0;border-radius:6px;padding:16px;display:flex;justify-content:space-between;color:#9a9a9a;font:400 15px/1 -apple-system,Helvetica,sans-serif}
-.ck-check{display:flex;gap:10px;font:400 14px/1.45 Inter;color:#111;margin-top:6px}
+.ck-check{display:flex;gap:10px;font:400 14px/1.45 Inter;color:#171918;margin-top:6px}
 .order-form-footer{text-align:center}
 @media(max-width:600px){.c-heading h1{font-size:46px}.ck{padding:0 20px 24px}.ck-tabs,.divider-form{margin-left:-20px;margin-right:-20px}}
 </style><div class="c-section"><div class="ck-page">
@@ -28,10 +28,10 @@
 
 <style>
 :root{
-  --tmg-night:#0d0d0d; --tmg-night2:#161616; --tmg-ink:#111111; --tmg-paper:#F4F1EA;
-  --tmg-lime:#DEFF00; --tmg-pink:#F782B9; --tmg-duck:#A2C1C4;
+  --tmg-night:#171918; --tmg-night2:#343C35; --tmg-ink:#171918; --tmg-paper:#EAE7DF;
+  --tmg-lime:#DFFF00; --tmg-putty:#D2CBBF; --tmg-sage:#A5B4A3;
   --tmg-soft:rgba(255,255,255,.78); --tmg-faint:rgba(255,255,255,.55); --tmg-line:rgba(255,255,255,.16);
-  --tmg-cardline:#DDD8CC; --tmg-cardsoft:#5E5A52;
+  --tmg-cardline:#D2CBBF; --tmg-cardsoft:#5E5A52;
 }
 
 /* page canvas: all three GHL background layers */
@@ -83,7 +83,7 @@ html, body{ overflow-x:clip !important; }
 }
 .form-input:focus, .coupon-input:focus{
   border-color:var(--tmg-ink) !important; outline:none !important;
-  box-shadow:0 0 0 3px rgba(222,255,0,.55) !important;
+  box-shadow:0 0 0 3px rgba(223,255,0,.55) !important;
 }
 input[type=checkbox]{ accent-color:var(--tmg-ink); }
 
@@ -189,7 +189,7 @@ input[type=checkbox]{ accent-color:var(--tmg-ink); }
     Secure checkout
   </span>
 </div>
-<div class="c-heading"><h1>Book your <span style="color:#DEFF00!important">place</span></h1>
+<div class="c-heading"><h1>Book your <span style="color:#DFFF00!important">place</span></h1>
 <p>The Gay Men's Retreat. Friday 10 to Sunday 12 September 2027, at Hill Farm in Tintern, near Chepstow.</p>
 <p style="font-size:16px;margin-top:6px">Book by 1 April 2027 and it's &pound;552.50, an introductory price for this first retreat. Then &pound;650. You pay in full when you book.</p></div><div class="c-order"><div class="container-order-form-two-step ck" data-on="1">
 <div class="ck-tabs"><a href="#" data-step="1"><b>1</b> Your details</a><a href="#" data-step="2"><b>2</b> Payment</a></div>

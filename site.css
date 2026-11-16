@@ -1,19 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=block');
 
 /* That Midlife Gay: design system, direction "2 After dark" with "1 Poster" colour blocks.
-   Palette from decisions (8 Nov): green #DEFF00, pink #F782B9, duck egg #A2C1C4, black and white. */
+   Palette: Heni's own, from his design review (16 Nov): lime, soft black, forest charcoal, warm ivory, putty, sage.
+   Replaces the 8 Nov palette (pink and duck egg are gone). */
 :root {
-  --night: #0d0d0d;
-  --night-2: #161616;
+  --night: #171918;
+  --charcoal: #343C35;
   --white: #ffffff;
   --soft: rgba(255,255,255,.78);
   --faint: rgba(255,255,255,.5);
   --line: rgba(255,255,255,.16);
-  --ink: #111111;
-  --lime: #DEFF00;
-  --pink: #F782B9;
-  --duck: #A2C1C4;
-  --paper: #F4F1EA;
+  --ink: #171918;
+  --lime: #DFFF00;
+  --ivory: #EAE7DF;
+  --putty: #D2CBBF;
+  --sage: #A5B4A3;
+  /* Type accents (16 Nov): four distinct hues from the same earthy family, never the button lime */
+  --teal: #2F5F5C;
+  --ochre: #D2A24C;
+  --clay: #C8694B;
   --gut: 22px;
   --max: 1180px;
 }
@@ -64,7 +69,7 @@ p + p { margin-top: 14px; }
 .hero { position: relative; overflow: hidden; background: var(--night); }
 .hero .photo { position: absolute; inset: 0 0 auto 0; height: 560px; }
 .hero .photo img { width: 100%; height: 100%; object-fit: cover; }
-.hero .photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13,13,13,.6) 0%, rgba(13,13,13,0) 20%, rgba(13,13,13,0) 48%, var(--night) 99%); }
+.hero .photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,25,24,.6) 0%, rgba(23,25,24,0) 20%, rgba(23,25,24,0) 48%, var(--night) 99%); }
 .hero .words { position: relative; z-index: 2; padding-top: 400px; padding-bottom: 48px; }
 .hero h1 { margin-bottom: 22px; }
 
@@ -79,10 +84,17 @@ p + p { margin-top: 14px; }
 .on-colour .ask { color: var(--ink); }
 .on-colour .brandline { color: var(--ink); }
 .bg-lime { background: var(--lime); }
-.bg-pink { background: var(--pink); }
-.bg-duck { background: var(--duck); }
-.bg-paper { background: var(--paper); }
-.bg-night2 { background: var(--night-2); }
+.bg-ivory { background: var(--ivory); }
+.bg-putty { background: var(--putty); }
+.bg-sage { background: var(--sage); }
+.bg-charcoal { background: var(--charcoal); }
+.bg-teal { background: var(--teal); }
+.bg-ochre { background: var(--ochre); }
+.bg-clay { background: var(--clay); }
+/* On light sections, buttons go soft black with lime text (as on the checkout he liked), so lime never sits on ivory */
+.on-colour .btn:not(.ghost) { background: var(--night); color: var(--lime); }
+.on-colour .btn.ghost { color: var(--ink); border-color: var(--ink); }
+.on-colour .lime { color: var(--ink); }
 
 /* Split: photo and words side by side on desktop, stacked on mobile */
 .split { display: grid; gap: 34px; }
@@ -100,11 +112,13 @@ p + p { margin-top: 14px; }
 
 /* Types */
 .types { display: grid; gap: 14px; margin-top: 30px; }
-.type { color: var(--ink); padding: 26px 24px 24px; min-height: 180px; display: flex; flex-direction: column; justify-content: space-between; }
+.type { background: var(--tc); color: var(--ink); padding: 26px 24px 24px; min-height: 180px; display: flex; flex-direction: column; justify-content: space-between; }
 .type .display { font-size: 40px; margin-bottom: 14px; }
 .type q { font: 500 18px/1.35 Inter; quotes: "\201C" "\201D"; }
 .type .go { font: 600 14px/1 Inter; margin-top: 18px; }
-.t-ha { background: var(--lime); } .t-gi { background: var(--pink); } .t-is { background: var(--duck); } .t-ls { background: var(--paper); }
+.type q { color: rgba(23,25,24,.8); }
+/* Type colours (16 Nov): no type in lime, the button colour. Superseded: High Achiever forest charcoal, Giver putty, Independent Spirit sage, Life & Soul ivory */
+.t-ha { --tc: var(--teal); } .t-gi { --tc: var(--ochre); } .t-is { --tc: var(--sage); } .t-ls { --tc: var(--clay); }
 
 /* Quotes */
 .quote { font-family: Archivo, sans-serif; font-stretch: 85%; font-weight: 500; font-size: 24px; line-height: 1.3; }
@@ -154,7 +168,7 @@ p + p { margin-top: 14px; }
 .progress i { display: block; height: 100%; background: var(--lime); }
 .answers { display: grid; gap: 12px; margin-top: 28px; }
 .answer { border: 1.5px solid var(--line); border-radius: 16px; padding: 18px 20px; font-size: 17px; line-height: 1.45; background: rgba(255,255,255,.03); }
-.answer.on { border-color: var(--lime); background: rgba(222,255,0,.08); }
+.answer.on { border-color: var(--lime); background: rgba(223,255,0,.08); }
 
 @media (min-width: 900px) {
   :root { --gut: 48px; }
@@ -169,7 +183,7 @@ p + p { margin-top: 14px; }
   .sec { padding: 120px 0; }
   .sec.tight { padding: 80px 0; }
   .hero .photo { height: 900px; }
-  .hero .photo::after { background: linear-gradient(90deg, var(--night) 0%, rgba(13,13,13,.86) 32%, rgba(13,13,13,0) 58%), linear-gradient(180deg, rgba(13,13,13,.5) 0%, rgba(13,13,13,0) 16%, rgba(13,13,13,0) 72%, var(--night) 100%); }
+  .hero .photo::after { background: linear-gradient(90deg, var(--night) 0%, rgba(23,25,24,.86) 32%, rgba(23,25,24,0) 58%), linear-gradient(180deg, rgba(23,25,24,.5) 0%, rgba(23,25,24,0) 16%, rgba(23,25,24,0) 72%, var(--night) 100%); }
   .hero .words { padding-top: 220px; padding-bottom: 110px; max-width: 640px; margin-left: max(var(--gut), calc((100% - var(--max)) / 2 + var(--gut))); padding-left: 0; padding-right: 0; }
   .split { grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
   .split.flip .pic { order: 2; }
@@ -183,6 +197,7 @@ p + p { margin-top: 14px; }
   .quote.sm { font-size: 26px; }
   .btnrow { flex-direction: row; }
   .facts li { grid-template-columns: 240px 1fr; gap: 24px; }
+  .facts li > span:only-child { grid-column: 1 / -1; }
   .footer .care { grid-template-columns: 1fr 1fr; gap: 60px; }
   .price { font-size: 140px; }
   .cols2 { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
@@ -202,6 +217,7 @@ body.menu-open .burger { justify-content: center; position: relative; }
 body.menu-open .burger i:first-child { transform: translateY(2px) rotate(45deg); }
 body.menu-open .burger i:last-child { transform: translateY(-2px) rotate(-45deg); }
 a.type { text-decoration: none; color: var(--ink); }
+.type.t-ha { color: var(--white); } .type.t-ha q { color: var(--soft); }
 a.answer { text-decoration: none; color: inherit; display: block; }
 .type, .answer { transition: transform .15s; }
 a.type:hover, a.answer:hover { transform: translateY(-2px); }
@@ -222,7 +238,7 @@ a.type:hover, a.answer:hover { transform: translateY(-2px); }
 @media (min-width: 900px) { .legal h1.display { font-size: 84px; } .legal h2.display { font-size: 42px; } }
 
 /* Cookie banner: accept and reject carry the same weight */
-.cookiebar { position: fixed; z-index: 20; left: 0; right: 0; bottom: 0; background: var(--night-2); border-top: 1px solid var(--line); padding: 18px 0 20px; box-shadow: 0 -18px 40px rgba(0,0,0,.35); }
+.cookiebar { position: fixed; z-index: 20; left: 0; right: 0; bottom: 0; background: var(--charcoal); border-top: 1px solid var(--line); padding: 18px 0 20px; box-shadow: 0 -18px 40px rgba(0,0,0,.35); }
 .cookiebar[hidden] { display: none; }
 .cookiebar .wrap { display: grid; gap: 14px; }
 .cookiebar p { font-size: 15px; line-height: 1.5; color: var(--soft); }
@@ -235,3 +251,46 @@ a.type:hover, a.answer:hover { transform: translateY(-2px); }
   .cookiebtns { grid-template-columns: auto auto; }
   .cookiebtns .btn { min-width: 150px; }
 }
+
+/* ---- Design round, 16 Nov: his review notes ---- */
+/* Type cards: a sideways scroll on phones (his Tony Robbins example), all in a row on desktop; each with its icon */
+.types.scroll { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+  margin: 30px calc(-1 * var(--gut)) 0; padding: 0 var(--gut) 6px; scroll-padding: 0 var(--gut); scrollbar-width: none; }
+.types.scroll::-webkit-scrollbar { display: none; }
+.types.scroll .type { flex: 0 0 78%; scroll-snap-align: start; min-height: 300px; border-radius: 18px; }
+.ticon { width: 52px; height: 52px; display: block; margin-bottom: 26px; }
+.type .go { display: inline; align-self: flex-start; margin-top: 22px; line-height: 1.5; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.swipe { margin-top: 12px; }
+@media (min-width: 900px) {
+  .types.scroll { display: grid; grid-template-columns: repeat(var(--n), 1fr); overflow: visible; margin: 34px 0 0; padding: 0; }
+  .types.scroll .type { min-height: 360px; padding: 30px 26px 28px; }
+  .types.scroll .type .display { font-size: 40px; }
+  .swipe { display: none; }
+}
+
+/* Quote cards: his favourite from the checkout. Quote marks, the words larger, the name as a small label */
+.qcard { background: var(--charcoal); color: var(--white); border-radius: 22px; padding: 32px 28px 28px; max-width: 760px; margin: 8px 0 0; }
+.bg-charcoal .qcard { background: var(--night); }
+.qcard blockquote { font-family: Archivo, sans-serif; font-stretch: 85%; font-weight: 500; font-size: 24px; line-height: 1.3; text-wrap: balance; }
+.qcard figcaption { font: 600 12px/1.4 Inter, sans-serif; letter-spacing: 2.5px; text-transform: uppercase; color: var(--lime); margin-top: 18px; }
+@media (min-width: 900px) { .qcard { padding: 46px 48px 40px; } .qcard blockquote { font-size: 32px; } }
+
+/* Portraits full width on phones (his note on "Who I am") */
+@media (max-width: 899px) {
+  .split .pic { margin: 0 calc(-1 * var(--gut)); }
+  .split .pic img { height: auto; aspect-ratio: 4 / 5; }
+  .split .pic .label { padding: 0 var(--gut); }
+}
+
+/* Bullets for text-heavy lists, like the privacy page he liked */
+.bullets { list-style: none; display: grid; gap: 12px; margin-top: 16px; }
+.bullets li { padding-left: 24px; position: relative; }
+.bullets li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 8px; height: 8px; border-radius: 50%; background: var(--lime); }
+.on-colour .bullets li::before { background: var(--ink); }
+.bullets + h3 { margin-top: 30px; }
+a.chip { text-decoration: none; }
+/* Footer: a way to get in touch, and his social links */
+.footer .touch { margin-top: 40px; padding-top: 26px; border-top: 1px solid var(--line); }
+.footer .touch h3 { color: var(--lime); }
+.footer .social { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.footer .social a { font: 600 14px/1 Inter, sans-serif; text-decoration: none; padding: 11px 16px; border: 1.5px solid var(--line); border-radius: 999px; color: var(--white); }
