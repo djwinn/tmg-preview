@@ -140,10 +140,13 @@ input[type=checkbox]{ accent-color:var(--tmg-ink); }
 }
 .tmg-photo{ width:104px; height:104px; flex:none; border-radius:50%; object-fit:cover; object-position:50% 18%; border:3px solid var(--tmg-lime); }
 .tmg-quote{
-  font-family:'Archivo',sans-serif; font-stretch:85%; font-weight:500; font-size:22px;
-  line-height:1.3; color:#fff; margin:0 0 10px;
+  font-family:'Archivo',sans-serif; font-stretch:85%; font-weight:500; font-size:25px;
+  line-height:1.25; color:#fff; margin:0 0 14px; text-wrap:balance;
 }
-.tmg-sign{ font-family:'Inter',sans-serif; font-weight:600; font-size:15px; color:var(--tmg-lime); }
+.tmg-sign{
+  font-family:'Inter',sans-serif; font-weight:600; font-size:12px; letter-spacing:2.5px;
+  text-transform:uppercase; color:var(--tmg-lime);
+}
 .tmg-terms{ max-width:620px; margin:16px auto 0; padding:22px 30px; border-radius:22px; background:var(--tmg-lime); color:var(--tmg-ink); }
 .tmg-terms h3{ font-family:'Archivo',sans-serif; font-stretch:62%; font-weight:900; text-transform:uppercase; font-size:24px; line-height:1; margin:0 0 10px; }
 .tmg-terms ul{ list-style:none; margin:0; padding:0; }
@@ -172,7 +175,7 @@ input[type=checkbox]{ accent-color:var(--tmg-ink); }
   .tmg-secure{ font-size:10px; letter-spacing:1.4px; }
   .tmg-assure{ flex-direction:column; text-align:center; gap:16px; padding:26px 22px; margin-top:28px; }
   .tmg-photo{ width:92px; height:92px; }
-  .tmg-quote{ font-size:20px; }
+  .tmg-quote{ font-size:22px; }
   .tmg-terms{ padding:22px; }
   .tmg-trust{ flex-direction:column; align-items:center; gap:9px; }
   .form-heading{ font-size:26px !important; }
@@ -208,8 +211,8 @@ input[type=checkbox]{ accent-color:var(--tmg-ink); }
 <div class="tmg-assure">
   <img class="tmg-photo" src="img/h02.jpg" alt="Heni Fourie">
   <div>
-    <p class="tmg-quote">You don't need to have everything figured out to come.</p>
-    <span class="tmg-sign">Heni</span>
+    <p class="tmg-quote">&ldquo;You don&rsquo;t need to have everything figured out to come.&rdquo;</p>
+    <span class="tmg-sign">Heni Fourie</span>
   </div>
 </div>
 
