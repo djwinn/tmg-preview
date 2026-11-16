@@ -1,0 +1,243 @@
+<!doctype html><html lang="en-GB"><head><meta name="robots" content="noindex, nofollow"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>Book your place | The Gay Men's Retreat</title>
+<link rel="stylesheet" href="site.css"></head><body>
+<style>
+.ck-page{padding:0 22px}
+.c-heading{max-width:760px;margin:56px auto 26px}
+.c-heading h1{font-size:64px}
+.c-heading p{font-size:19px;line-height:1.5;margin-top:14px}
+.ck{padding:0 34px 34px;overflow:hidden}
+.ck-tabs{display:flex;margin:0 -34px}.ck-tabs a{flex:1;text-align:center;padding:18px 8px;font:600 15px/1 Inter;color:#5E5A52;text-decoration:none}
+.ck-tabs b{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;border:1.5px solid currentColor;margin-right:8px;font-size:12px}
+.ck[data-on="1"] .ck-tabs a:first-child,.ck[data-on="2"] .ck-tabs a:last-child{color:#111}
+.divider-form{height:3px;margin:0 -34px 26px}
+.ck[data-on="1"] .divider-form{background:linear-gradient(90deg,#111 50%,#DDD8CC 50%)!important}
+.ck[data-on="2"] .divider-form{background:linear-gradient(90deg,#DDD8CC 50%,#111 50%)!important}
+.ck-step{display:none}.ck[data-on="1"] .s1,.ck[data-on="2"] .s2{display:grid;gap:12px}
+.form-input{padding:17px 16px}.ck .form-input{color:#8a857b!important}
+.form-btn{display:block;text-align:center;text-decoration:none;margin-top:10px}
+.ck-row{display:flex;justify-content:space-between;gap:16px;padding:6px 0;font-size:16px}.ck-row small{color:#5E5A52;font-size:14px;font-weight:400}
+.divider-product{height:1px}
+.ck-stripe{background:#fff;border:1px solid #e0e0e0;border-radius:6px;padding:16px;display:flex;justify-content:space-between;color:#9a9a9a;font:400 15px/1 -apple-system,Helvetica,sans-serif}
+.ck-check{display:flex;gap:10px;font:400 14px/1.45 Inter;color:#111;margin-top:6px}
+.order-form-footer{text-align:center}
+@media(max-width:600px){.c-heading h1{font-size:46px}.ck{padding:0 20px 24px}.ck-tabs,.divider-form{margin-left:-20px;margin-right:-20px}}
+</style><div class="c-section"><div class="ck-page">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Inter:wght@400;500;600;700&display=swap">
+
+<style>
+:root{
+  --tmg-night:#0d0d0d; --tmg-night2:#161616; --tmg-ink:#111111; --tmg-paper:#F4F1EA;
+  --tmg-lime:#DEFF00; --tmg-pink:#F782B9; --tmg-duck:#A2C1C4;
+  --tmg-soft:rgba(255,255,255,.78); --tmg-faint:rgba(255,255,255,.55); --tmg-line:rgba(255,255,255,.16);
+  --tmg-cardline:#DDD8CC; --tmg-cardsoft:#5E5A52;
+}
+
+/* page canvas: all three GHL background layers */
+body, .hl_page-preview--content, .c-section, .fullSection,
+.bgCover, .bg-fixed{ background-color:var(--tmg-night) !important; }
+body{ font-family:'Inter',sans-serif !important; color:var(--tmg-soft) !important; }
+.bg.full-center{ background-image:none !important; background-color:transparent !important; }
+
+/* product headline on the page */
+.c-heading h1, .c-heading h2, h1, h1 span, h1 strong{
+  font-family:'Archivo',sans-serif !important; font-stretch:62% !important; font-weight:900 !important;
+  text-transform:uppercase !important; color:#fff !important;
+  letter-spacing:-.005em !important; line-height:.92 !important;
+}
+
+/* the order card: centred column, set before Stripe mounts */
+.c-order{
+  max-width:760px !important; width:100% !important;
+  margin-left:auto !important; margin-right:auto !important; float:none !important;
+}
+/* the card stays light: Stripe's card fields are white and can't be restyled */
+.container-order-form-two-step{
+  background:var(--tmg-paper) !important; border:none !important;
+  border-radius:22px !important; box-shadow:0 30px 70px rgba(0,0,0,.45) !important;
+}
+
+/* step bar: GHL's own blue, no setting for it */
+.divider-form{ background:var(--tmg-ink) !important; }
+.caret-up, .caret-up::before{ color:var(--tmg-ink) !important; }
+
+html, body{ overflow-x:clip !important; }
+
+.c-section:has(.tmg-head), .c-row:has(.tmg-head), .c-column:has(.tmg-head){ padding-top:0 !important; }
+.c-section:has(.tmg-foot), .c-row:has(.tmg-foot), .c-column:has(.tmg-foot){ padding-bottom:0 !important; }
+
+/* form headings */
+.form-heading{
+  font-family:'Archivo',sans-serif !important; font-stretch:62% !important; font-weight:900 !important;
+  text-transform:uppercase !important; color:var(--tmg-ink) !important;
+  font-size:30px !important; letter-spacing:0 !important; line-height:1 !important;
+}
+.form-sub-heading{ font-family:'Inter',sans-serif !important; color:var(--tmg-cardsoft) !important; font-size:15px !important; }
+
+/* inputs */
+.form-input, .form-input.input, .coupon-input{
+  font-family:'Inter',sans-serif !important; background:#fff !important;
+  border:1.5px solid var(--tmg-cardline) !important; border-radius:12px !important;
+  color:var(--tmg-ink) !important; font-size:16px !important;
+}
+.form-input:focus, .coupon-input:focus{
+  border-color:var(--tmg-ink) !important; outline:none !important;
+  box-shadow:0 0 0 3px rgba(222,255,0,.55) !important;
+}
+input[type=checkbox]{ accent-color:var(--tmg-ink); }
+
+/* rules and labels */
+.payment-title{
+  font-family:'Inter',sans-serif !important; font-weight:700 !important; letter-spacing:2.5px !important;
+  text-transform:uppercase !important; color:var(--tmg-ink) !important; font-size:12px !important;
+}
+.payment-bar, .divider-product{ background:var(--tmg-cardline) !important; border-color:var(--tmg-cardline) !important; }
+.separator{ color:var(--tmg-cardsoft) !important; font-family:'Inter',sans-serif !important; font-size:13px !important; }
+.order-form-footer span{ font-family:'Inter',sans-serif !important; color:var(--tmg-cardsoft) !important; font-size:12px !important; }
+
+/* prices: doubled selectors on purpose (.item-price alone loses to .item) */
+.item.item-price, .order-total .item-price, .product-cost-total .item-price,
+.order-total *, .item-price *{ color:var(--tmg-ink) !important; font-weight:700 !important; }
+.item, .product-name, .product-title, .product-description{
+  font-family:'Inter',sans-serif !important; color:var(--tmg-ink) !important;
+}
+
+/* the pay button: the site's own button, black on the light card */
+.form-btn{
+  background:var(--tmg-ink) !important; color:var(--tmg-lime) !important;
+  border:none !important; border-radius:999px !important;
+  font-family:'Inter',sans-serif !important; font-weight:600 !important;
+  letter-spacing:0 !important; text-transform:none !important;
+  font-size:17px !important; padding:20px 30px !important; min-height:60px !important;
+  box-shadow:none !important; transition:transform .25s !important;
+}
+.form-btn:hover{ transform:translateY(-2px); }
+.apply-btn{
+  background:#fff !important; color:var(--tmg-ink) !important;
+  border:1.5px solid var(--tmg-ink) !important; border-radius:12px !important;
+  font-family:'Inter',sans-serif !important; font-weight:600 !important;
+}
+
+/* header: the logo is NOT a link (every exit loses the sale) */
+.tmg-head{
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  padding:0 5vw; height:68px; background:var(--tmg-night); border-bottom:1px solid var(--tmg-line);
+}
+.tmg-head, .tmg-foot{ margin-left:calc(50% - 50vw) !important; margin-right:calc(50% - 50vw) !important; }
+.tmg-logo{ height:22px; width:auto; display:block; }
+.tmg-secure{
+  font-family:'Inter',sans-serif; font-size:12px; font-weight:600; letter-spacing:2px;
+  text-transform:uppercase; color:var(--tmg-faint);
+  display:inline-flex; align-items:center; gap:8px; white-space:nowrap;
+}
+.tmg-secure svg{ width:14px; height:14px; flex:none; color:var(--tmg-lime); }
+
+/* reassurance */
+.tmg-assure{
+  max-width:620px; margin:36px auto 0; background:var(--tmg-night2); border:1px solid var(--tmg-line);
+  border-radius:22px; padding:28px 30px; display:flex; gap:24px; align-items:center;
+}
+.tmg-photo{ width:104px; height:104px; flex:none; border-radius:50%; object-fit:cover; object-position:50% 18%; border:3px solid var(--tmg-lime); }
+.tmg-quote{
+  font-family:'Archivo',sans-serif; font-stretch:85%; font-weight:500; font-size:22px;
+  line-height:1.3; color:#fff; margin:0 0 10px;
+}
+.tmg-sign{ font-family:'Inter',sans-serif; font-weight:600; font-size:15px; color:var(--tmg-lime); }
+.tmg-terms{ max-width:620px; margin:16px auto 0; padding:22px 30px; border-radius:22px; background:var(--tmg-lime); color:var(--tmg-ink); }
+.tmg-terms h3{ font-family:'Archivo',sans-serif; font-stretch:62%; font-weight:900; text-transform:uppercase; font-size:24px; line-height:1; margin:0 0 10px; }
+.tmg-terms ul{ list-style:none; margin:0; padding:0; }
+.tmg-terms li{ font-family:'Inter',sans-serif; font-size:15px; line-height:1.45; padding:5px 0 5px 18px; position:relative; }
+.tmg-terms li::before{ content:""; position:absolute; left:0; top:13px; width:6px; height:6px; border-radius:50%; background:var(--tmg-ink); }
+.tmg-trust{
+  max-width:620px; margin:20px auto 0; padding:0; list-style:none;
+  display:flex; flex-wrap:wrap; justify-content:center; gap:10px 26px;
+}
+.tmg-trust li{
+  font-family:'Inter',sans-serif; font-size:12.5px; letter-spacing:1.6px; text-transform:uppercase;
+  font-weight:600; color:var(--tmg-faint); display:flex; align-items:center; gap:8px;
+}
+.tmg-trust li::before{ content:""; width:6px; height:6px; border-radius:50%; background:var(--tmg-lime); flex:none; }
+
+/* footer: Privacy and Terms open in a new tab, so reading them isn't an exit */
+.tmg-foot{ background:var(--tmg-night); border-top:1px solid var(--tmg-line); text-align:center; padding:48px 5vw 40px; margin-top:56px; }
+.tmg-foot img{ height:20px; width:auto; margin:0 auto 14px; display:block; }
+.tmg-foot-meta{ font-family:'Inter',sans-serif; font-size:14px; color:var(--tmg-faint); }
+.tmg-foot-links{ margin-top:14px; font-family:'Inter',sans-serif; font-size:14px; }
+.tmg-foot-links a{ color:#fff; text-decoration:none; border-bottom:2px solid var(--tmg-lime); margin:0 12px; display:inline-block; padding:4px 0 2px; }
+
+@media (max-width:600px){
+  .tmg-head{ padding:0 20px; height:60px; }
+  .tmg-logo{ height:19px; }
+  .tmg-secure{ font-size:10px; letter-spacing:1.4px; }
+  .tmg-assure{ flex-direction:column; text-align:center; gap:16px; padding:26px 22px; margin-top:28px; }
+  .tmg-photo{ width:92px; height:92px; }
+  .tmg-quote{ font-size:20px; }
+  .tmg-terms{ padding:22px; }
+  .tmg-trust{ flex-direction:column; align-items:center; gap:9px; }
+  .form-heading{ font-size:26px !important; }
+}
+</style>
+
+<div class="tmg-head">
+  <img class="tmg-logo" src="img/logo-white.png" alt="That Midlife Gay">
+  <span class="tmg-secure">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+    Secure checkout
+  </span>
+</div>
+<div class="c-heading"><h1>Book your <span style="color:#DEFF00!important">place</span></h1>
+<p>The Gay Men's Retreat. Friday 10 to Sunday 12 September 2027, at Hill Farm in Tintern, near Chepstow.</p>
+<p style="font-size:16px;margin-top:6px">Book by 1 April 2027 and it's &pound;552.50, an introductory price for this first retreat. Then &pound;650. You pay in full when you book.</p></div><div class="c-order"><div class="container-order-form-two-step ck" data-on="1">
+<div class="ck-tabs"><a href="#" data-step="1"><b>1</b> Your details</a><a href="#" data-step="2"><b>2</b> Payment</a></div>
+<div class="divider-form"></div>
+<div class="ck-step s1"><h3 class="form-heading">Your details</h3>
+<div class="form-input">Full name</div><div class="form-input">Email</div><div class="form-input">Phone</div>
+<a class="form-btn" href="#" data-step="2">Continue to payment</a></div>
+<div class="ck-step s2"><h3 class="form-heading">Payment</h3>
+<div class="payment-title">Your booking</div><div class="divider-product"></div>
+<div class="ck-row"><span class="item product-name">The Gay Men's Retreat<br><small>Friday 10 to Sunday 12 September 2027, Hill Farm, Tintern</small></span><span class="item item-price">&pound;552.50</span></div>
+<div class="divider-product"></div>
+<div class="ck-row order-total"><span class="item"><strong>Total</strong></span><span class="item-price">&pound;552.50</span></div>
+<div class="payment-title" style="margin-top:22px">Card</div>
+<div class="ck-stripe"><span>Card number</span><span>MM / YY &nbsp; CVC</span></div>
+<label class="ck-check"><input type="checkbox"> <span>I've read the booking terms below, including what happens if my plans change.</span></label>
+<a class="form-btn" href="thanks-retreat.html">Book your place</a>
+<div class="order-form-footer"><span>Payments are processed securely by Stripe.</span></div></div>
+</div></div>
+<div class="tmg-assure">
+  <img class="tmg-photo" src="img/h02.jpg" alt="Heni Fourie">
+  <div>
+    <p class="tmg-quote">You don't need to have everything figured out to come.</p>
+    <span class="tmg-sign">Heni</span>
+  </div>
+</div>
+
+<div class="tmg-terms">
+  <h3>If your plans change</h3>
+  <ul>
+    <li>Cancel on or before 12 July 2027 for a full refund.</li>
+    <li>Cancel from 13 July to 11 August 2027 for a 50% refund.</li>
+    <li>Cancel from 12 August 2027 onwards and no refund is available.</li>
+    <li>You can transfer your place to another eligible participant, subject to confirming the change with me.</li>
+    <li>If too few men book, I'll let you know by Friday 30 July 2027, and you'll get a full refund.</li>
+  </ul>
+</div>
+
+<ul class="tmg-trust">
+  <li>Secure payment</li>
+  <li>Your receipt by email</li>
+  <li>10 places</li>
+</ul>
+
+<div class="tmg-foot">
+  <img src="img/logo-white.png" alt="That Midlife Gay">
+  <div class="tmg-foot-meta">That Midlife Gay is a trading name of Fourie Photography Ltd.</div>
+  <div class="tmg-foot-links">
+    <a href="https://thatmidlifegay.com/privacy" target="_blank" rel="noopener">Privacy</a>
+    <a href="https://thatmidlifegay.com/terms" target="_blank" rel="noopener">Terms</a>
+  </div>
+</div>
+</div></div><script>document.querySelectorAll('[data-step]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();
+document.querySelector('.ck').dataset.on=b.dataset.step;scrollTo(0,document.querySelector('.c-order').offsetTop-20)}))</script>
+<script>document.querySelectorAll(".burger").forEach(b=>b.addEventListener("click",()=>document.body.classList.toggle("menu-open")))</script><script>addEventListener("load",()=>setTimeout(()=>document.documentElement.setAttribute("data-h",document.documentElement.scrollHeight),300))</script></body></html>
