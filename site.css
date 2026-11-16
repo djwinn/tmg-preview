@@ -253,15 +253,31 @@ a.type:hover, a.answer:hover { transform: translateY(-2px); }
 }
 
 /* ---- Design round, 16 Nov: his review notes ---- */
-/* Type cards: as before the round (Daniel, 16 Nov), but a sideways scroll on phones (Heni's ask); two columns on desktop */
+/* Type cards: image cards in a sideways carousel on phone and desktop, like his Tony Robbins example (Heni, 16 Nov). No type colours. */
+.carousel { position: relative; }
 .types.scroll { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
   margin: 30px calc(-1 * var(--gut)) 0; padding: 0 var(--gut) 6px; scroll-padding: 0 var(--gut); scrollbar-width: none; }
 .types.scroll::-webkit-scrollbar { display: none; }
 .types.scroll .type { flex: 0 0 78%; scroll-snap-align: start; }
+.type { position: relative; overflow: hidden; background: var(--night); color: var(--white); aspect-ratio: 3 / 4.3; min-height: 0; padding: 0;
+  display: flex; flex-direction: column; justify-content: flex-end; text-align: center; }
+.type img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.type::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,25,24,0) 35%, rgba(23,25,24,.88) 100%); }
+.type .tw { position: relative; z-index: 2; padding: 0 22px 28px; }
+.type .display { font-size: 40px; margin-bottom: 10px; color: var(--white); }
+.type q, .type.t-ha q { color: var(--soft); }
+.type .go { display: block; margin-top: 16px; color: var(--lime); }
+a.type, .type.t-ha { color: var(--white); }
 .swipe { margin-top: 12px; }
+.carrows { display: none; }
 @media (min-width: 900px) {
-  .types.scroll { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; overflow: visible; margin: 30px 0 0; padding: 0; }
+  .types.scroll { gap: 18px; margin: 30px 0 0; padding: 0 0 6px; scroll-padding: 0; }
+  .types.scroll .type { flex: 0 0 calc((100% - 36px) / 3.25); }
+  .type .display { font-size: 48px; }
   .swipe { display: none; }
+  .carrows { display: flex; gap: 10px; justify-content: flex-end; margin-top: 30px; }
+  .carrows + .types.scroll { margin-top: 16px; }
+  .carr { width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid currentColor; background: transparent; color: inherit; font-size: 20px; cursor: pointer; }
 }
 
 /* Quote cards: his favourite from the checkout. Quote marks, the words larger, the name as a small label */
@@ -273,6 +289,8 @@ a.type:hover, a.answer:hover { transform: translateY(-2px); }
 
 /* Portraits full width on phones (his note on "Who I am") */
 @media (max-width: 899px) {
+  .sec:has(> .wrap.split > .pic) { padding-top: 0; }
+  .split > .pic { order: -1; }
   .split .pic { margin: 0 calc(-1 * var(--gut)); }
   .split .pic img { height: auto; aspect-ratio: 4 / 5; }
   .split .pic .label { padding: 0 var(--gut); }
