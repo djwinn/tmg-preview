@@ -253,19 +253,14 @@ a.type:hover, a.answer:hover { transform: translateY(-2px); }
 }
 
 /* ---- Design round, 16 Nov: his review notes ---- */
-/* Type cards: a sideways scroll on phones (his Tony Robbins example), two columns on desktop (Daniel, 16 Nov); each with its icon */
+/* Type cards: as before the round (Daniel, 16 Nov), but a sideways scroll on phones (Heni's ask); two columns on desktop */
 .types.scroll { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
   margin: 30px calc(-1 * var(--gut)) 0; padding: 0 var(--gut) 6px; scroll-padding: 0 var(--gut); scrollbar-width: none; }
 .types.scroll::-webkit-scrollbar { display: none; }
-.types.scroll .type { flex: 0 0 78%; scroll-snap-align: start; min-height: 300px; border-radius: 0; }
-.ticon { width: 52px; height: 52px; display: block; margin-bottom: 26px; }
-.type .go { display: inline; align-self: flex-start; margin-top: 22px; line-height: 1.5; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.types.scroll .type { flex: 0 0 78%; scroll-snap-align: start; }
 .swipe { margin-top: 12px; }
 @media (min-width: 900px) {
-  .types.scroll { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; overflow: visible; margin: 34px 0 0; padding: 0; }
-  .types.scroll .type { min-height: 300px; padding: 34px 34px 30px; }
-  .types.scroll .type:last-child:nth-child(odd) { grid-column: 1 / -1; min-height: 240px; }
-  .types.scroll .type .display { font-size: 48px; }
+  .types.scroll { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; overflow: visible; margin: 30px 0 0; padding: 0; }
   .swipe { display: none; }
 }
 
